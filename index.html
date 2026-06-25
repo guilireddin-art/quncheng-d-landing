@@ -25,6 +25,17 @@
     }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
+    :root {
+      --primary: #143f6b;
+      --primary-dark: #0b2f55;
+      --primary-soft: #eef6ff;
+      --accent: #c99a2e;
+      --accent-soft: #fff8e6;
+      --trust: #0f766e;
+      --line: #06c755;
+      --muted-border: #d8e6f3;
+      --shadow-blue: rgba(20,63,107,.16);
+    }
 
     /* ===== QUICK NEWS TICKER (TVBS 快訊條) ===== */
     .quick-news-bar {
@@ -37,7 +48,7 @@
       font-size: 13px;
     }
     .quick-news-label {
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       font-size: 12px;
       font-weight: 700;
@@ -100,7 +111,7 @@
       flex-shrink: 0;
     }
     .site-logo .logo-badge {
-      background: #e30000;
+      background: var(--accent);
       color: #fff;
       font-size: 11px;
       font-weight: 700;
@@ -127,7 +138,7 @@
     }
     .nav-menu li a:hover,
     .nav-menu li.active a {
-      color: #e30000;
+      color: var(--primary);
     }
     .nav-search {
       margin-left: auto;
@@ -145,7 +156,7 @@
       width: 140px;
       outline: none;
     }
-    .nav-search input:focus { border-color: #e30000; }
+    .nav-search input:focus { border-color: var(--primary); }
     .nav-search-btn {
       background: none;
       border: none;
@@ -181,7 +192,7 @@
       gap: 4px;
     }
     .breadcrumb a {
-      color: #e30000;
+      color: var(--primary);
     }
     .breadcrumb a:hover { text-decoration: underline; }
     .breadcrumb .sep { color: #ccc; }
@@ -195,7 +206,7 @@
     /* 分類標籤 */
     .cat-tag {
       display: inline-block;
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       font-size: 12px;
       font-weight: 700;
@@ -226,11 +237,11 @@
       border-bottom: 1px solid #eee;
       margin-bottom: 16px;
     }
-    .article-byline .reporter { color: #e30000; font-weight: 500; }
+    .article-byline .reporter { color: var(--primary); font-weight: 500; }
     .article-byline .live-dot {
       display: inline-block;
       width: 7px; height: 7px;
-      background: #e30000;
+      background: var(--accent);
       border-radius: 50%;
       animation: blink 1.2s ease-in-out infinite;
       margin-right: 3px;
@@ -264,15 +275,15 @@
 
     /* 緊急提示橫幅 */
     .urgency-strip {
-      background: #fff3cd;
-      border-left: 4px solid #e30000;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
       padding: 10px 14px;
       font-size: 14px;
       color: #333;
       margin-bottom: 20px;
       line-height: 1.6;
     }
-    .urgency-strip strong { color: #e30000; }
+    .urgency-strip strong { color: var(--primary); }
 
     /* 文章主圖 */
     .article-main-img {
@@ -308,24 +319,24 @@
     .article-body h2 {
       font-size: 19px;
       font-weight: 700;
-      color: #e30000;
-      border-bottom: 2px solid #e30000;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 6px;
       margin: 28px 0 14px;
     }
 
     /* 資料框（替代 highlight-box） */
     .data-box {
-      background: #fff8f8;
-      border: 1px solid #ffd5d5;
-      border-left: 4px solid #e30000;
+      background: var(--primary-soft);
+      border: 1px solid var(--muted-border);
+      border-left: 4px solid var(--primary);
       padding: 14px 16px;
       margin: 20px 0;
       font-size: 14px;
       line-height: 1.75;
       color: #444;
     }
-    .data-box strong { color: #e30000; }
+    .data-box strong { color: var(--primary); }
 
     /* 對比表格 */
     .compare-wrap {
@@ -338,7 +349,7 @@
       font-size: 14px;
     }
     .compare-table th {
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       padding: 10px 12px;
       text-align: center;
@@ -376,7 +387,7 @@
     }
     .live-stats .dot {
       width: 8px; height: 8px;
-      background: #e30000;
+      background: var(--accent);
       border-radius: 50%;
       flex-shrink: 0;
       animation: blink 1.2s ease-in-out infinite;
@@ -384,23 +395,23 @@
 
     /* ===== QUIZ / FORM SECTION ===== */
     .quiz-section {
-      background: linear-gradient(135deg, #fff8f8 0%, #fff 100%);
-      border: 2px solid #e30000;
+      background: linear-gradient(135deg, #eef6ff 0%, #fff 100%);
+      border: 2px solid var(--primary);
       border-radius: 4px;
       margin-top: 28px;
       padding: 0;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(227,0,0,.12);
+      box-shadow: 0 4px 20px var(--shadow-blue);
     }
     .quiz-section-header {
-      background: #e30000;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       padding: 16px 20px;
       text-align: center;
     }
     .quiz-section-header .header-badge {
       display: inline-block;
       background: #fff;
-      color: #e30000;
+      color: var(--primary);
       font-size: 11px;
       font-weight: 700;
       padding: 2px 10px;
@@ -432,7 +443,7 @@
       margin-bottom: 6px;
     }
     .progress-bar {
-      background: #e30000;
+      background: var(--accent);
       height: 100%;
       border-radius: 2px;
       transition: width .4s ease;
@@ -457,7 +468,7 @@
       gap: 8px;
     }
     .step-badge {
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       width: 22px; height: 22px;
       border-radius: 50%;
@@ -499,13 +510,13 @@
       font-family: inherit;
       box-shadow: 0 1px 4px rgba(0,0,0,.06);
     }
-    .option-btn:hover { border-color: #e30000; background: #fff8f8; transform: translateY(-1px); box-shadow: 0 3px 10px rgba(227,0,0,.15); }
+    .option-btn:hover { border-color: var(--primary); background: var(--primary-soft); transform: translateY(-1px); box-shadow: 0 3px 10px var(--shadow-blue); }
     .option-btn.selected {
-      border-color: #e30000;
-      background: #e30000;
+      border-color: var(--primary);
+      background: var(--primary);
       color: #fff;
       font-weight: 700;
-      box-shadow: 0 3px 12px rgba(227,0,0,.3);
+      box-shadow: 0 3px 12px var(--shadow-blue);
     }
     .option-btn.selected .option-icon {
       border-color: #fff;
@@ -519,13 +530,13 @@
       transition: border-color .15s, background .15s;
     }
     .option-btn.selected .option-icon {
-      border-color: #e30000;
-      background: #e30000;
+      border-color: var(--primary);
+      background: var(--primary);
     }
 
     .next-btn {
       width: 100%;
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -537,13 +548,13 @@
       transition: background .15s;
       font-family: inherit;
     }
-    .next-btn:hover { background: #c00000; }
+    .next-btn:hover { background: var(--primary-dark); }
 
     /* Step 3 估算卡 */
     .estimate-card {
       background: #fff;
       border: 1px solid #e5e5e5;
-      border-top: 3px solid #e30000;
+      border-top: 3px solid var(--accent);
       padding: 16px;
       margin-bottom: 16px;
       text-align: center;
@@ -552,7 +563,7 @@
     .estimate-amount {
       font-size: 28px;
       font-weight: 900;
-      color: #e30000;
+      color: var(--primary);
       margin-bottom: 8px;
     }
     .estimate-note { font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 12px; }
@@ -609,7 +620,7 @@
       transition: border-color .15s;
     }
     .form-group input:focus,
-    .form-group select:focus { border-color: #e30000; }
+    .form-group select:focus { border-color: var(--primary); }
     .id-hint {
       font-size: 11px;
       color: #999;
@@ -618,7 +629,7 @@
 
     .cta-btn {
       width: 100%;
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -629,7 +640,7 @@
       transition: background .15s;
       font-family: inherit;
     }
-    .cta-btn:hover { background: #c00000; }
+    .cta-btn:hover { background: var(--primary-dark); }
     .cta-btn:disabled { background: #aaa; cursor: not-allowed; }
 
     .ssl-badge {
@@ -657,8 +668,8 @@
       margin-bottom: 16px;
     }
     .success-alert {
-      background: #fff3cd;
-      border: 1px solid #ffc107;
+      background: var(--accent-soft);
+      border: 1px solid #ead39a;
       padding: 10px 14px;
       font-size: 13px;
       color: #555;
@@ -754,7 +765,7 @@
       font-weight: 700;
       color: #111;
       padding-bottom: 10px;
-      border-bottom: 2px solid #e30000;
+      border-bottom: 2px solid var(--accent);
       margin-bottom: 16px;
     }
     .comment-item {
@@ -815,8 +826,8 @@
       font-family: inherit;
     }
     .like-btn:hover, .like-btn.liked {
-      border-color: #e30000;
-      color: #e30000;
+      border-color: var(--primary);
+      color: var(--primary);
     }
     .time-stamp { color: #bbb; }
 
@@ -862,13 +873,13 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
-    .hot-num.top3 { background: #e30000; }
+    .hot-num.top3 { background: var(--accent); }
 
     .sidebar-stats { font-size: 13px; color: #555; line-height: 2.1; }
-    .sidebar-stats .stat-val { font-weight: 700; color: #e30000; }
+    .sidebar-stats .stat-val { font-weight: 700; color: var(--primary); }
 
     .sidebar-cta {
-      background: #e30000;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #fff;
       padding: 14px;
       text-align: center;
@@ -879,7 +890,7 @@
     .sidebar-cta p { font-size: 12px; opacity: .85; margin-bottom: 10px; }
     .sidebar-cta button {
       background: #fff;
-      color: #e30000;
+      color: var(--primary);
       border: none;
       border-radius: 3px;
       padding: 6px 16px;
@@ -897,10 +908,10 @@
       left: 0;
       right: 0;
       background: #fff;
-      border-top: 4px solid #e30000;
+      border-top: 4px solid var(--primary);
       padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
       z-index: 900;
-      box-shadow: 0 -4px 20px rgba(227,0,0,.2);
+      box-shadow: 0 -4px 20px var(--shadow-blue);
     }
     .float-cta-inner {
       display: flex;
@@ -913,11 +924,11 @@
       color: #888;
       line-height: 1.4;
     }
-    .float-cta-text strong { color: #e30000; font-size: 12px; }
+    .float-cta-text strong { color: var(--primary); font-size: 12px; }
     .float-cta-btn {
       display: block;
       width: 100%;
-      background: linear-gradient(135deg, #e30000 0%, #ff2020 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -928,12 +939,12 @@
       text-align: center;
       font-family: inherit;
       letter-spacing: 0.5px;
-      box-shadow: 0 3px 12px rgba(227,0,0,.4);
+      box-shadow: 0 3px 12px var(--shadow-blue);
       animation: ctaPulse 2.5s ease-in-out infinite;
     }
     @keyframes ctaPulse {
-      0%, 100% { box-shadow: 0 3px 12px rgba(227,0,0,.4); }
-      50% { box-shadow: 0 3px 20px rgba(227,0,0,.7); }
+      0%, 100% { box-shadow: 0 3px 12px var(--shadow-blue); }
+      50% { box-shadow: 0 3px 20px rgba(20,63,107,.32); }
     }
 
     /* ===== MODAL ===== */
@@ -958,7 +969,7 @@
     .modal-box h3 { font-size: 16px; margin-bottom: 10px; color: #333; }
     .modal-box p { font-size: 14px; color: #555; margin-bottom: 18px; line-height: 1.6; }
     .modal-box button {
-      background: #e30000;
+      background: var(--primary);
       color: #fff;
       border: none;
       border-radius: 3px;
@@ -1159,7 +1170,7 @@
         <!-- 即時數據 -->
         <div class="live-stats">
           <span class="dot"></span>
-          <span>即時數據：今日已有 <strong id="live-num">1,247</strong> 人透過岳湧資產管理完成線上評估登記，<strong style="color:#e30000">最高100萬額度名額開放中，請盡快確認！</strong></span>
+          <span>即時數據：今日已有 <strong id="live-num">1,247</strong> 人透過岳湧資產管理完成線上評估登記，<strong style="color:#143f6b">最高100萬額度名額開放中，請盡快確認！</strong></span>
         </div>
 
         <div class="article-main-img" style="margin-top:4px;">
